@@ -1,57 +1,59 @@
 # Turnix Backend Assessment
 
-This is a Node.js backend application built using Express.
+This is a Node.js backend application built using Express.js as part of the Turnix code assessment.
 
-## 🚀 Tech Stack
-- Node.js
-- Express.js
-- UUID
-- In-memory data store
-- Queue & Worker pattern
+## Features
+- Express server setup
+- JSON middleware enabled
+- Auth routes
+- Orders routes
+- Modular folder structure
 
-## 📂 Project Structure
+## Project Structure
 
-turnix-assessment/
+turnix-assessment
+│
 ├── src
-│   ├── data
-│   │   └── store.js
+│   ├── app.js
+│   ├── index.js
+│   ├── queue.js
 │   ├── routes
 │   │   ├── auth.routes.js
-│   │   └── index.js
+│   │   └── orders.routes.js
 │   ├── workers
 │   │   └── order.worker.js
-│   ├── app.js
-│   └── queue.js
+│   └── data
+│       ├── users.js
+│       ├── orders.js
+│       └── store.js
+│
 ├── package.json
+├── package-lock.json
+├── .gitignore
 └── README.md
 
-## ⚙️ Setup Instructions
+## Installation
 
-1. Clone repository:
-git clone https://github.com/shaikhaseena-5544/turnix-assessment
+1. Clone the repository
+git clone https://github.com/shaikhaseena-5544/turnix-assessment.git
 
-2. Go inside project:
-cd turnix-assessment
-
-3. Install dependencies:
+2. Install dependencies
 npm install
 
-4. Start server:
-npm start
+3. Start the server
+node src/index.js
 
-## 🔥 API Endpoints
+## API Endpoints
 
-GET /api/auth/test  
-Returns test message
+GET /
+Returns server status
 
-POST /api/orders  
-Creates order and pushes to queue
+GET /api/auth
+Auth route test
 
-## ✅ Features
+GET /api/orders
+Orders route test
 
-- Express server setup
-- Modular routes
-- In-memory database
-- Queue processing
-- Background worker
+## Author
 
+Shaik Haseena
